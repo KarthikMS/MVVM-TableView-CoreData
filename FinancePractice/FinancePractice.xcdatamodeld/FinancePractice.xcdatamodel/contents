@@ -11,6 +11,7 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="place" inverseEntity="Transaction"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="userName" attributeType="String"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="profile" inverseEntity="Account"/>
         <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="profile" inverseEntity="Place"/>
     </entity>
@@ -23,7 +24,7 @@
     <elements>
         <element name="Account" positionX="-378.578125" positionY="-236.171875" width="128" height="88"/>
         <element name="Place" positionX="-171" positionY="-45" width="128" height="88"/>
-        <element name="Profile" positionX="-74.046875" positionY="-236.80078125" width="128" height="73"/>
+        <element name="Profile" positionX="-74.046875" positionY="-236.80078125" width="128" height="88"/>
         <element name="Transaction" positionX="-36" positionY="9" width="128" height="103"/>
     </elements>
 </model>

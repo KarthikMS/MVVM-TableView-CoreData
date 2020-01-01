@@ -119,7 +119,7 @@
 			children = (
 				D93E8DBA23BC815000982A04 /* AppDelegate.swift */,
 				D93E8DFF23BC8F1900982A04 /* Model */,
-				D93E8DED23BC81B000982A04 /* CoreDataService.swift */,
+				D93E8E1023BCD82C00982A04 /* Services */,
 				D93E8DBE23BC815000982A04 /* ViewController.swift */,
 				D93E8DC023BC815000982A04 /* Main.storyboard */,
 				D93E8DC623BC815200982A04 /* Assets.xcassets */,
@@ -161,6 +161,14 @@
 				D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D93E8E1023BCD82C00982A04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D93E8DED23BC81B000982A04 /* CoreDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

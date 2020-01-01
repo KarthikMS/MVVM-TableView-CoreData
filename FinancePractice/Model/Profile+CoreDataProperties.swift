@@ -17,8 +17,9 @@ extension Profile {
         return NSFetchRequest<Profile>(entityName: "Profile")
     }
 
-    @NSManaged public var accounts: NSSet?
-    @NSManaged public var places: NSSet?
+    @NSManaged public var userName: String
+    @NSManaged public var accounts: NSSet
+    @NSManaged public var places: NSSet
 
 }
 

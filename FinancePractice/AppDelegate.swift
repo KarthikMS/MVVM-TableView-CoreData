@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private let coreDataService = CoreDataService.shared
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//		coreDataService.addTestData()
+		coreDataService.printCoreDataContents()
 		return true
 	}
 

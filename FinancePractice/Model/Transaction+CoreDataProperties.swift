@@ -19,7 +19,7 @@ extension Transaction {
 
     @NSManaged public var amount: Float
     @NSManaged public var note: String?
-    @NSManaged public var account: Account?
+    @NSManaged public var account: Account
     @NSManaged public var place: Place?
 
 }

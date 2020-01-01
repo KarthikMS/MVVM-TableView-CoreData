@@ -17,9 +17,9 @@ extension Place {
         return NSFetchRequest<Place>(entityName: "Place")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var profile: Profile?
-    @NSManaged public var transactions: NSSet?
+    @NSManaged public var name: String
+    @NSManaged public var profile: Profile
+    @NSManaged public var transactions: NSSet
 
 }
 
