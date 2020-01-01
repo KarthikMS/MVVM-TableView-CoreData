@@ -4,7 +4,7 @@ class CoreDataService {
 	static let shared = CoreDataService()
 
 	// MARK: - Properties
-	private lazy var context: NSManagedObjectContext = {
+	lazy var context: NSManagedObjectContext = {
 	    let container = NSPersistentContainer(name: "FinancePractice")
 	    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 	        if let error = error as NSError? {

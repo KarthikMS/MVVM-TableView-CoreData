@@ -23,6 +23,7 @@
 		D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */; };
 		D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */; };
 		D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */; };
+		D94697A523BCFFBC004F3C87 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94697A423BCFFBC004F3C87 /* ProfileListView.swift */; };
 		D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BA06F23BCF46400274352 /* ProfileListViewController.swift */; };
 		D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */; };
 		D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */; };
@@ -71,6 +72,7 @@
 		D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D94697A423BCFFBC004F3C87 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		D97BA06F23BCF46400274352 /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
 		D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModel.swift; sourceTree = "<group>"; };
 		D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSource.swift; sourceTree = "<group>"; };
@@ -181,6 +183,57 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D946979A23BCFD4E004F3C87 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D946979B23BCFD71004F3C87 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D946979A23BCFD4E004F3C87 /* Protocols */,
+				D946979C23BCFD7A004F3C87 /* Implementations */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D946979C23BCFD7A004F3C87 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D946979D23BCFD94004F3C87 /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				D9FF1DB423BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift */,
+				D9FF1DB223BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		D946979E23BCFDCA004F3C87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D946979F23BCFDD5004F3C87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D97BA06F23BCF46400274352 /* ProfileListViewController.swift */,
+				D94697A423BCFFBC004F3C87 /* ProfileListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D97BA06E23BCF37300274352 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,12 +245,10 @@
 		D97BA07123BCF46900274352 /* ProfileList */ = {
 			isa = PBXGroup;
 			children = (
-				D97BA06F23BCF46400274352 /* ProfileListViewController.swift */,
-				D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */,
-				D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */,
-				D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */,
-				D9FF1DB223BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift */,
-				D9FF1DB423BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift */,
+				D946979F23BCFDD5004F3C87 /* View */,
+				D946979E23BCFDCA004F3C87 /* ViewModel */,
+				D946979B23BCFD71004F3C87 /* Services */,
+				D946979D23BCFD94004F3C87 /* Assemblers */,
 			);
 			path = ProfileList;
 			sourceTree = "<group>";
@@ -343,6 +394,7 @@
 				D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */,
 				D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */,
 				D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */,
+				D94697A523BCFFBC004F3C87 /* ProfileListView.swift in Sources */,
 				D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */,
 				D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */,
 				D9FF1DB323BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift in Sources */,
