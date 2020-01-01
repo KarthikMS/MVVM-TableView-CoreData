@@ -16,6 +16,14 @@
 		D93E8DD523BC815300982A04 /* FinancePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DD423BC815300982A04 /* FinancePracticeTests.swift */; };
 		D93E8DE023BC815300982A04 /* FinancePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */; };
 		D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DED23BC81B000982A04 /* CoreDataService.swift */; };
+		D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */; };
+		D93E8E0923BC926E00982A04 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */; };
+		D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */; };
+		D93E8E0B23BC926E00982A04 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */; };
+		D93E8E0C23BC926E00982A04 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */; };
+		D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */; };
+		D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */; };
+		D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancePracticeUITests.swift; sourceTree = "<group>"; };
 		D93E8DE123BC815300982A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93E8DED23BC81B000982A04 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D93E8DBA23BC815000982A04 /* AppDelegate.swift */,
+				D93E8DFF23BC8F1900982A04 /* Model */,
 				D93E8DED23BC81B000982A04 /* CoreDataService.swift */,
 				D93E8DBE23BC815000982A04 /* ViewController.swift */,
 				D93E8DC023BC815000982A04 /* Main.storyboard */,
@@ -129,6 +146,21 @@
 				D93E8DE123BC815300982A04 /* Info.plist */,
 			);
 			path = FinancePracticeUITests;
+			sourceTree = "<group>";
+		};
+		D93E8DFF23BC8F1900982A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */,
+				D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */,
+				D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */,
+				D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */,
+				D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */,
+				D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */,
+				D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */,
+				D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93E8E0B23BC926E00982A04 /* Transaction+CoreDataProperties.swift in Sources */,
+				D93E8E0923BC926E00982A04 /* Account+CoreDataProperties.swift in Sources */,
+				D93E8E0C23BC926E00982A04 /* Place+CoreDataClass.swift in Sources */,
+				D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */,
+				D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */,
 				D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */,
+				D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */,
+				D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */,
 				D93E8DBF23BC815000982A04 /* ViewController.swift in Sources */,
 				D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */,
+				D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
