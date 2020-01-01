@@ -35,31 +35,4 @@ internal extension CoreDataService {
 	        }
 	    }
 	}
-
-	// del
-	func addTestData() {
-		let profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: context)!
-		let accountEntity = NSEntityDescription.entity(forEntityName: "Account", in: context)!
-
-		let account = Account(entity: accountEntity, insertInto: context)
-		account.name = "HDFC"
-
-		let profile = Profile(entity: profileEntity, insertInto: context)
-		profile.userName = "Karthik"
-		profile.addToAccounts(account)
-
-		saveContext()
-	}
-
-	func printCoreDataContents() {
-		let fetchRequest = NSFetchRequest<Profile>(entityName: "Profile")
-		let profiles: [Profile]
-		do {
-			profiles = try context.fetch(fetchRequest)
-		} catch {
-			fatalError("Error fetching. \(error.localizedDescription)")
-		}
-		print(profiles)
-	}
-	// del
 }
