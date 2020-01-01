@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBA23BC815000982A04 /* AppDelegate.swift */; };
-		D93E8DBD23BC815000982A04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBC23BC815000982A04 /* SceneDelegate.swift */; };
 		D93E8DBF23BC815000982A04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBE23BC815000982A04 /* ViewController.swift */; };
 		D93E8DC223BC815000982A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC023BC815000982A04 /* Main.storyboard */; };
 		D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */; };
@@ -16,6 +15,7 @@
 		D93E8DCA23BC815200982A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC823BC815200982A04 /* LaunchScreen.storyboard */; };
 		D93E8DD523BC815300982A04 /* FinancePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DD423BC815300982A04 /* FinancePracticeTests.swift */; };
 		D93E8DE023BC815300982A04 /* FinancePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */; };
+		D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DED23BC81B000982A04 /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		D93E8DB723BC815000982A04 /* FinancePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DBA23BC815000982A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D93E8DBC23BC815000982A04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D93E8DBE23BC815000982A04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D93E8DC123BC815000982A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D93E8DC423BC815000982A04 /* FinancePractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinancePractice.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		D93E8DDB23BC815300982A04 /* FinancePracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancePracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancePracticeUITests.swift; sourceTree = "<group>"; };
 		D93E8DE123BC815300982A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93E8DED23BC81B000982A04 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D93E8DBA23BC815000982A04 /* AppDelegate.swift */,
-				D93E8DBC23BC815000982A04 /* SceneDelegate.swift */,
+				D93E8DED23BC81B000982A04 /* CoreDataService.swift */,
 				D93E8DBE23BC815000982A04 /* ViewController.swift */,
 				D93E8DC023BC815000982A04 /* Main.storyboard */,
 				D93E8DC623BC815200982A04 /* Assets.xcassets */,
@@ -262,9 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */,
 				D93E8DBF23BC815000982A04 /* ViewController.swift in Sources */,
 				D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */,
-				D93E8DBD23BC815000982A04 /* SceneDelegate.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
