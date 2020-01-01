@@ -21,6 +21,10 @@ internal extension ProfileListViewModel {
 	}
 
 	func addProfile(userName: String) {
-		print("Adding \(userName)")
+		dataSource.addProfile(userName: userName)
+
+		// temp
+		tableViewItems = dataSource.getAllProfiles().map { $0.userName }
+		view?.reloadTableView()
 	}
 }

@@ -25,6 +25,10 @@ extension ProfileListDataSourceCoreDataImpl {
 		return profiles
 	}
 
-	func add(_ profile: Profile) {
+	func addProfile(userName: String) {
+		let profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: context)!
+		let profile = Profile(entity: profileEntity, insertInto: context)
+		profile.userName = userName
+		coreDataService.saveContext()
 	}
 }

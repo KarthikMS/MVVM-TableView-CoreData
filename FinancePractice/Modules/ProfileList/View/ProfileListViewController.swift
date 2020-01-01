@@ -32,6 +32,10 @@ extension ProfileListViewController: UITableViewDataSource {
 
 // MARK: - ProfileListView
 extension ProfileListViewController {
+	func reloadTableView() {
+		tableView.reloadData()
+	}
+
 	func showAlertToAddProfile() {
 		let alertController = UIAlertController(title: "New Profile", message: nil, preferredStyle: .alert)
 		alertController.addTextField { userNameTextField in
