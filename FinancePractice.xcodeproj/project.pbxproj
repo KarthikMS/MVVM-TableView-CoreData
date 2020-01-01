@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBA23BC815000982A04 /* AppDelegate.swift */; };
-		D93E8DBF23BC815000982A04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBE23BC815000982A04 /* ViewController.swift */; };
 		D93E8DC223BC815000982A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC023BC815000982A04 /* Main.storyboard */; };
 		D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */; };
 		D93E8DC723BC815200982A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC623BC815200982A04 /* Assets.xcassets */; };
@@ -24,6 +23,12 @@
 		D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */; };
 		D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */; };
 		D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */; };
+		D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BA06F23BCF46400274352 /* ProfileListViewController.swift */; };
+		D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */; };
+		D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */; };
+		D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */; };
+		D9FF1DB323BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DB223BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift */; };
+		D9FF1DB523BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DB423BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,6 @@
 /* Begin PBXFileReference section */
 		D93E8DB723BC815000982A04 /* FinancePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DBA23BC815000982A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D93E8DBE23BC815000982A04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D93E8DC123BC815000982A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D93E8DC423BC815000982A04 /* FinancePractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinancePractice.xcdatamodel; sourceTree = "<group>"; };
 		D93E8DC623BC815200982A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +71,12 @@
 		D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D93E8E0723BC926E00982A04 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D97BA06F23BCF46400274352 /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
+		D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModel.swift; sourceTree = "<group>"; };
+		D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSource.swift; sourceTree = "<group>"; };
+		D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceCoreDataImpl.swift; sourceTree = "<group>"; };
+		D9FF1DB223BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceAssembler.swift; sourceTree = "<group>"; };
+		D9FF1DB423BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModelAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				D93E8DBA23BC815000982A04 /* AppDelegate.swift */,
+				D97BA06E23BCF37300274352 /* Modules */,
 				D93E8DFF23BC8F1900982A04 /* Model */,
 				D93E8E1023BCD82C00982A04 /* Services */,
-				D93E8DBE23BC815000982A04 /* ViewController.swift */,
 				D93E8DC023BC815000982A04 /* Main.storyboard */,
 				D93E8DC623BC815200982A04 /* Assets.xcassets */,
 				D93E8DC823BC815200982A04 /* LaunchScreen.storyboard */,
@@ -169,6 +179,27 @@
 				D93E8DED23BC81B000982A04 /* CoreDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D97BA06E23BCF37300274352 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D97BA07123BCF46900274352 /* ProfileList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D97BA07123BCF46900274352 /* ProfileList */ = {
+			isa = PBXGroup;
+			children = (
+				D97BA06F23BCF46400274352 /* ProfileListViewController.swift */,
+				D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */,
+				D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */,
+				D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */,
+				D9FF1DB223BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift */,
+				D9FF1DB423BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift */,
+			);
+			path = ProfileList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,14 +336,19 @@
 				D93E8E0B23BC926E00982A04 /* Transaction+CoreDataProperties.swift in Sources */,
 				D93E8E0923BC926E00982A04 /* Account+CoreDataProperties.swift in Sources */,
 				D93E8E0C23BC926E00982A04 /* Place+CoreDataClass.swift in Sources */,
+				D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */,
+				D9FF1DB523BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift in Sources */,
 				D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */,
 				D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */,
 				D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */,
 				D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */,
+				D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */,
+				D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */,
 				D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */,
-				D93E8DBF23BC815000982A04 /* ViewController.swift in Sources */,
+				D9FF1DB323BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift in Sources */,
 				D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */,
 				D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */,
+				D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

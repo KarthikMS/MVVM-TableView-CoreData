@@ -1,11 +1,3 @@
-//
-//  CoreDataService.swift
-//  FinancePractice
-//
-//  Created by Karthik M S on 01/01/20.
-//  Copyright © 2020 Zoho. All rights reserved.
-//
-
 import CoreData
 
 class CoreDataService {
