@@ -44,6 +44,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profiles" id="XV5-S5-zub">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="VNW-d0-7v9">
+                            <connections>
+                                <action selector="clearButtonPressed:" destination="BYZ-38-t0r" id="3Fs-H8-wXo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JzP-nZ-K5p">
                             <connections>
                                 <action selector="addProfileButtonPressed:" destination="BYZ-38-t0r" id="2cF-6t-nwH"/>

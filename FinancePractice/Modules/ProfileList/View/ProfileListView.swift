@@ -1,4 +1,13 @@
+import Foundation
+
 protocol ProfileListView: class {
-	func reloadTableView()
+	// TableView
+	func tableViewReload()
+	func tableViewBeginUpdates()
+	func tableViewInsertRow(at newIndexPath: IndexPath)
+	func tableViewDeleteRow(at indexPath: IndexPath)
+	func tableViewUpdateRow(at indexPath: IndexPath)
+	func tableViewEndUpdates()
+
 	func showAlertToAddProfile()
 }

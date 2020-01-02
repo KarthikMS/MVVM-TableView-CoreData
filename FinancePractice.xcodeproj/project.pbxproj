@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */; };
 		D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBA23BC815000982A04 /* AppDelegate.swift */; };
 		D93E8DC223BC815000982A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC023BC815000982A04 /* Main.storyboard */; };
 		D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceObserver.swift; sourceTree = "<group>"; };
 		D93E8DB723BC815000982A04 /* FinancePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DBA23BC815000982A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93E8DC123BC815000982A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */,
+				D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */,
 				D9FF1DB323BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift in Sources */,
 				D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */,
+				D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */,
 				D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */,
 				D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,

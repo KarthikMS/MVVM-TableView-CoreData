@@ -1,4 +1,7 @@
 protocol ProfileListDataSource {
-	func getAllProfiles() -> [Profile]
+	var observer: ProfileListDataSourceObserver? { get set }
+
+	func fetchProfiles() -> [Profile]
 	func addProfile(userName: String)
+	func clearData()
 }

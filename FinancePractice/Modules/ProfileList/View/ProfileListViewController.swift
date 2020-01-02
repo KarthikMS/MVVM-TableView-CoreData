@@ -12,8 +12,12 @@ class ProfileListViewController: UIViewController, ProfileListView {
 extension ProfileListViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		viewModel = ProfileListViewModelAssembler.createInstance(view: self)
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		viewModel.viewWillAppear()
 	}
 }
 
@@ -32,8 +36,29 @@ extension ProfileListViewController: UITableViewDataSource {
 
 // MARK: - ProfileListView
 extension ProfileListViewController {
-	func reloadTableView() {
+	// TableView
+	func tableViewReload() {
 		tableView.reloadData()
+	}
+
+	func tableViewBeginUpdates() {
+		tableView.beginUpdates()
+	}
+
+	func tableViewInsertRow(at newIndexPath: IndexPath) {
+		tableView.insertRows(at: [newIndexPath], with: .bottom)
+	}
+
+	func tableViewDeleteRow(at indexPath: IndexPath) {
+		tableView.deleteRows(at: [indexPath], with: .top)
+	}
+
+	func tableViewUpdateRow(at indexPath: IndexPath) {
+		tableView.reloadRows(at: [indexPath], with: .fade)
+	}
+
+	func tableViewEndUpdates() {
+		tableView.endUpdates()
 	}
 
 	func showAlertToAddProfile() {
@@ -58,5 +83,9 @@ extension ProfileListViewController {
 private extension ProfileListViewController {
 	@IBAction func addProfileButtonPressed(_ sender: Any) {
 		viewModel.addProfileButtonPressed()
+	}
+
+	@IBAction func clearButtonPressed(_ sender: Any) {
+		viewModel.clearData()
 	}
 }
