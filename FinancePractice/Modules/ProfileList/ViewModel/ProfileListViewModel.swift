@@ -13,7 +13,7 @@ class ProfileListViewModel {
 		self.dataSource = dataSource
 		self.dataSource.observer = self
 
-		tableViewItems = dataSource.fetchProfiles().map { $0.userName }
+		tableViewItems = dataSource.fetchProfiles().map { $0.tableViewText }
 	}
 }
 
@@ -55,7 +55,7 @@ extension ProfileListViewModel: ProfileListDataSourceObserver {
 	}
 
 	func profilesChanged(to newProfiles: [Profile]) {
-		tableViewItems = newProfiles.map { $0.userName }
+		tableViewItems = newProfiles.map { $0.tableViewText }
 		view?.tableViewEndUpdates()
 	}
 }

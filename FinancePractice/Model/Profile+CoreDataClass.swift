@@ -5,3 +5,9 @@ import CoreData
 public class Profile: NSManagedObject {
 
 }
+
+extension Profile {
+	var tableViewText: String {
+		"\(userName) (\(accounts.count))"
+	}
+}
