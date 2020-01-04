@@ -8,6 +8,14 @@ class AccountListViewController: UIViewController {
 	var viewModel: AccountListViewModel!
 }
 
+// MARK: - View Life Cycle
+extension AccountListViewController {
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		title = viewModel.navigationBarTitle
+	}
+}
+
 // MARK: - UITableViewDataSource
 extension AccountListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
