@@ -12,22 +12,23 @@ class ProfileListViewModel {
 		self.dataSource = dataSource
 		self.dataSource.observer = self
 
-		tableViewItems = dataSource.profiles.map { $0.tableViewText }
+		tableViewItems = dataSource.profiles.map { $0.tableViewCellText }
 	}
 }
 
 // MARK: - Exposed functions
 internal extension ProfileListViewModel {
-	func viewWillAppear() {
-		view?.tableViewReload()
+	func viewWillAppear(view: ProfileListView) {
+		self.view = view
+		view.tableViewReload()
 	}
 
-	func addProfileButtonPressed() {
-		view?.showAlertToAddProfile()
+	func viewWillDisappear() {
+		self.view = nil
 	}
 
-	func addProfile(userName: String) {
-		dataSource.addProfile(userName: userName)
+	func addProfile(named userName: String) {
+		dataSource.addProfile(named: userName)
 	}
 
 	func clearData() {
@@ -37,8 +38,7 @@ internal extension ProfileListViewModel {
 	func tableViewDidSelectRow(at indexPath: IndexPath) {
 		let profiles = dataSource.profiles
 		guard indexPath.row < profiles.count else { fatalError() }
-		let profile = dataSource.profiles[indexPath.row]
-		view?.showListing(of: profile)
+		view?.showAccounts(of: profiles[indexPath.row])
 	}
 }
 
@@ -61,7 +61,7 @@ extension ProfileListViewModel: ProfileListDataSourceObserver {
 	}
 
 	func profilesChanged(to newProfiles: [Profile]) {
-		tableViewItems = newProfiles.map { $0.tableViewText }
+		tableViewItems = newProfiles.map { $0.tableViewCellText }
 		view?.tableViewEndUpdates()
 	}
 }

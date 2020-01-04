@@ -6,8 +6,9 @@ public class Profile: NSManagedObject {
 
 }
 
+// MARK: - Util
 extension Profile {
-	var tableViewText: String {
+	var tableViewCellText: String {
 		"\(userName) (\(accounts.count))"
 	}
 }

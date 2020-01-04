@@ -10,14 +10,14 @@ class ProfileListViewController: UIViewController, ProfileListView {
 
 // MARK: - View Life Cycle
 extension ProfileListViewController {
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		viewModel.view = self
-	}
-
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		viewModel.viewWillAppear()
+		viewModel.viewWillAppear(view: self)
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		viewModel.viewWillDisappear()
 	}
 }
 
@@ -85,6 +85,24 @@ extension ProfileListViewController {
 		tableView.endUpdates()
 	}
 
+	func showAccounts(of profile: Profile) {
+		performSegue(withIdentifier: "ProfileListToAccountList", sender: profile)
+	}
+}
+
+// MARK: - IBActions
+private extension ProfileListViewController {
+	@IBAction func addProfileButtonPressed(_ sender: Any) {
+		showAlertToAddProfile()
+	}
+
+	@IBAction func clearButtonPressed(_ sender: Any) {
+		viewModel.clearData()
+	}
+}
+
+// MARK: - Alerts
+private extension ProfileListViewController {
 	func showAlertToAddProfile() {
 		let alertController = UIAlertController(title: "New Profile", message: nil, preferredStyle: .alert)
 		alertController.addTextField { userNameTextField in
@@ -94,26 +112,11 @@ extension ProfileListViewController {
 		let addProfileAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
 			let userName = alertController.textFields!.first!.text!
 			guard !userName.isEmpty else { return }
-			self?.viewModel.addProfile(userName: userName)
+			self?.viewModel.addProfile(named: userName)
 		}
 		alertController.addAction(cancelAction)
 		alertController.addAction(addProfileAction)
 
 		present(alertController, animated: true, completion: nil)
-	}
-
-	func showListing(of profile: Profile) {
-		performSegue(withIdentifier: "ProfileListToAccountList", sender: profile)
-	}
-}
-
-// MARK: - IBActions
-private extension ProfileListViewController {
-	@IBAction func addProfileButtonPressed(_ sender: Any) {
-		viewModel.addProfileButtonPressed()
-	}
-
-	@IBAction func clearButtonPressed(_ sender: Any) {
-		viewModel.clearData()
 	}
 }

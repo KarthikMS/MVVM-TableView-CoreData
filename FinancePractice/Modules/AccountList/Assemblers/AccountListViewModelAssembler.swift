@@ -1,5 +1,13 @@
 class AccountListViewModelAssembler {
 	static func createInstance(profile: Profile) -> AccountListViewModel {
-		return AccountListViewModel(profile: profile)
+		let dataSource: AccountListDataSource = AccountListDataSourceCoreDataImpl(
+			profile: profile,
+			context: CoreDataService.shared.context
+		)
+
+		return AccountListViewModel(
+			profile: profile,
+			dataSource: dataSource
+		)
 	}
 }

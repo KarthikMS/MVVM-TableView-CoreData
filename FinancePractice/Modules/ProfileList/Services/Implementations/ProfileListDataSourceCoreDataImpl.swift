@@ -4,6 +4,9 @@ class ProfileListDataSourceCoreDataImpl: NSObject, ProfileListDataSource {
 	// MARK: - Dependencies
 	private let coreDataService = CoreDataService.shared
 	private let context: NSManagedObjectContext
+
+	// MARK: - Properites
+	weak var observer: ProfileListDataSourceObserver?
 	private let fetchedResultsController: NSFetchedResultsController<Profile>
 
 	override init() {
@@ -23,8 +26,6 @@ class ProfileListDataSourceCoreDataImpl: NSObject, ProfileListDataSource {
 
 		fetchedResultsController.delegate = self
 	}
-
-	weak var observer: ProfileListDataSourceObserver?
 }
 
 // MARK: - ProfileListDataSource
@@ -37,7 +38,7 @@ extension ProfileListDataSourceCoreDataImpl {
 		}
 	}
 
-	func addProfile(userName: String) {
+	func addProfile(named userName: String) {
 		let profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: context)!
 		let profile = Profile(entity: profileEntity, insertInto: context)
 		profile.userName = userName

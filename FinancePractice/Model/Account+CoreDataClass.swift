@@ -5,3 +5,10 @@ import CoreData
 public class Account: NSManagedObject {
 
 }
+
+// MARK: - Util
+extension Account {
+	var tableViewCellText: String {
+		"\(name) (\(transactions.count))"
+	}
+}

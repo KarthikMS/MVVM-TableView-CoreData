@@ -1,6 +1,8 @@
 import Foundation
 
-protocol ProfileListView: class {
+protocol AccountListView: class {
+	func setNavigationBarTitle(to title: String)
+
 	// TableView
 	func tableViewReload()
 	func tableViewBeginUpdates()
@@ -9,5 +11,5 @@ protocol ProfileListView: class {
 	func tableViewUpdateRow(at indexPath: IndexPath)
 	func tableViewEndUpdates()
 
-	func showAccounts(of profile: Profile)
+	func showTransactions(of account: Account)
 }
