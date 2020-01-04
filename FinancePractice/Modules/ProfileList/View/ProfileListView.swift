@@ -10,4 +10,5 @@ protocol ProfileListView: class {
 	func tableViewEndUpdates()
 
 	func showAlertToAddProfile()
+	func showListing(of profile: Profile)
 }

@@ -29,12 +29,11 @@ class ProfileListDataSourceCoreDataImpl: NSObject, ProfileListDataSource {
 
 // MARK: - ProfileListDataSource
 extension ProfileListDataSourceCoreDataImpl {
-	func fetchProfiles() -> [Profile] {
-		do {
-			try fetchedResultsController.performFetch()
-			return fetchedResultsController.fetchedObjects ?? []
-		} catch {
-			fatalError()
+	var profiles: [Profile] {
+		if let fetchedProfiles = fetchedResultsController.fetchedObjects {
+			return fetchedProfiles
+		} else {
+			return fetchProfiles()
 		}
 	}
 
@@ -46,7 +45,7 @@ extension ProfileListDataSourceCoreDataImpl {
 	}
 
 	func clearData() {
-		for profile in getAllProfiles() {
+		for profile in profiles {
 			context.delete(profile)
 		}
 		coreDataService.saveContext()
@@ -82,16 +81,12 @@ extension ProfileListDataSourceCoreDataImpl: NSFetchedResultsControllerDelegate 
 
 // MARK: - Util
 private extension ProfileListDataSourceCoreDataImpl {
-	func getAllProfiles() -> [Profile] {
-		let fetchRequest = NSFetchRequest<Profile>(entityName: "Profile")
-		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "userName", ascending: true)]
-
-		let profiles: [Profile]
+	func fetchProfiles() -> [Profile] {
 		do {
-			profiles = try context.fetch(fetchRequest)
+			try fetchedResultsController.performFetch()
+			return fetchedResultsController.fetchedObjects ?? []
 		} catch {
 			fatalError()
 		}
-		return profiles
 	}
 }

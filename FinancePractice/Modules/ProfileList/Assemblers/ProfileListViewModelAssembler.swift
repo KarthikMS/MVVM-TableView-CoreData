@@ -1,10 +1,6 @@
 class ProfileListViewModelAssembler {
-	static func createInstance(view: ProfileListView) -> ProfileListViewModel {
+	static func createInstance() -> ProfileListViewModel {
 		let dataSource = ProfileListDataSourceAssembler.createInstance()
-
-		return ProfileListViewModel(
-			view: view,
-			dataSource: dataSource
-		)
+		return ProfileListViewModel(dataSource: dataSource)
 	}
 }

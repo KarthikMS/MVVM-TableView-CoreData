@@ -2,18 +2,17 @@ import Foundation
 
 class ProfileListViewModel {
 	// MARK: - Dependencies
-	private weak var view: ProfileListView?
+	weak var view: ProfileListView?
 	private var dataSource: ProfileListDataSource
 
 	// MARK: - Properties
 	var tableViewItems = [String]()
 
-	init(view: ProfileListView, dataSource: ProfileListDataSource) {
-		self.view = view
+	init(dataSource: ProfileListDataSource) {
 		self.dataSource = dataSource
 		self.dataSource.observer = self
 
-		tableViewItems = dataSource.fetchProfiles().map { $0.tableViewText }
+		tableViewItems = dataSource.profiles.map { $0.tableViewText }
 	}
 }
 
@@ -33,6 +32,13 @@ internal extension ProfileListViewModel {
 
 	func clearData() {
 		dataSource.clearData()
+	}
+
+	func tableViewDidSelectRow(at indexPath: IndexPath) {
+		let profiles = dataSource.profiles
+		guard indexPath.row < profiles.count else { fatalError() }
+		let profile = dataSource.profiles[indexPath.row]
+		view?.showListing(of: profile)
 	}
 }
 

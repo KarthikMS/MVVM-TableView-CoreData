@@ -5,19 +5,35 @@ class ProfileListViewController: UIViewController, ProfileListView {
 	@IBOutlet weak var tableView: UITableView!
 
 	// MARK: - Dependencies
-	private var viewModel: ProfileListViewModel!
+	private let viewModel = ProfileListViewModelAssembler.createInstance()
 }
 
 // MARK: - View Life Cycle
 extension ProfileListViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		viewModel = ProfileListViewModelAssembler.createInstance(view: self)
+		viewModel.view = self
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		viewModel.viewWillAppear()
+	}
+}
+
+// MARK: - Navigation
+extension ProfileListViewController {
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let segueIdentifier = segue.identifier else { fatalError() }
+		switch segueIdentifier {
+		case "ProfileListToAccountList":
+			guard let accountListViewController = segue.destination as? AccountListViewController,
+				let profile = sender as? Profile else { fatalError() }
+			let accountListViewModel = AccountListViewModelAssembler.createInstance(profile: profile)
+			accountListViewController.viewModel = accountListViewModel
+		default:
+			break
+		}
 	}
 }
 
@@ -31,6 +47,14 @@ extension ProfileListViewController: UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCellIdentifier", for: indexPath)
 		cell.textLabel?.text = viewModel.tableViewItems[indexPath.row]
 		return cell
+	}
+}
+
+// MARK: - UITableViewDelegate
+extension ProfileListViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		viewModel.tableViewDidSelectRow(at: indexPath)
 	}
 }
 
@@ -76,6 +100,10 @@ extension ProfileListViewController {
 		alertController.addAction(addProfileAction)
 
 		present(alertController, animated: true, completion: nil)
+	}
+
+	func showListing(of profile: Profile) {
+		performSegue(withIdentifier: "ProfileListToAccountList", sender: profile)
 	}
 }
 

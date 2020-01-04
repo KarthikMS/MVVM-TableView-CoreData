@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */; };
+		D9257ED123BF1D5E005FE802 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ED023BF1D5E005FE802 /* AccountListViewController.swift */; };
+		D9257ED423BF1D6E005FE802 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ED323BF1D6E005FE802 /* AccountListViewModel.swift */; };
+		D9257ED723C0502B005FE802 /* AccountListViewModelAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ED623C0502B005FE802 /* AccountListViewModelAssembler.swift */; };
 		D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DBA23BC815000982A04 /* AppDelegate.swift */; };
 		D93E8DC223BC815000982A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC023BC815000982A04 /* Main.storyboard */; };
 		D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */; };
@@ -52,6 +55,9 @@
 
 /* Begin PBXFileReference section */
 		D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceObserver.swift; sourceTree = "<group>"; };
+		D9257ED023BF1D5E005FE802 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		D9257ED323BF1D6E005FE802 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		D9257ED623C0502B005FE802 /* AccountListViewModelAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModelAssembler.swift; sourceTree = "<group>"; };
 		D93E8DB723BC815000982A04 /* FinancePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DBA23BC815000982A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93E8DC123BC815000982A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +114,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9257ECE23BF1D3E005FE802 /* AccountList */ = {
+			isa = PBXGroup;
+			children = (
+				D9257ECF23BF1D52005FE802 /* View */,
+				D9257ED223BF1D61005FE802 /* ViewModel */,
+				D9257ED523C04FD7005FE802 /* Assemblers */,
+			);
+			path = AccountList;
+			sourceTree = "<group>";
+		};
+		D9257ECF23BF1D52005FE802 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9257ED023BF1D5E005FE802 /* AccountListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9257ED223BF1D61005FE802 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9257ED323BF1D6E005FE802 /* AccountListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D9257ED523C04FD7005FE802 /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				D9257ED623C0502B005FE802 /* AccountListViewModelAssembler.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
 		D93E8DAE23BC815000982A04 = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +179,6 @@
 				D93E8DC623BC815200982A04 /* Assets.xcassets */,
 				D93E8DC823BC815200982A04 /* LaunchScreen.storyboard */,
 				D93E8DCB23BC815200982A04 /* Info.plist */,
-				D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */,
 			);
 			path = FinancePractice;
 			sourceTree = "<group>";
@@ -165,6 +204,7 @@
 		D93E8DFF23BC8F1900982A04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */,
 				D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */,
 				D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */,
 				D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */,
@@ -240,6 +280,7 @@
 		D97BA06E23BCF37300274352 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D9257ECE23BF1D3E005FE802 /* AccountList */,
 				D97BA07123BCF46900274352 /* ProfileList */,
 			);
 			path = Modules;
@@ -394,6 +435,7 @@
 				D9FF1DB523BCF89B00C7E7F2 /* ProfileListViewModelAssembler.swift in Sources */,
 				D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */,
 				D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */,
+				D9257ED423BF1D6E005FE802 /* AccountListViewModel.swift in Sources */,
 				D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */,
 				D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */,
 				D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */,
@@ -405,7 +447,9 @@
 				D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */,
 				D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */,
 				D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */,
+				D9257ED123BF1D5E005FE802 /* AccountListViewController.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
+				D9257ED723C0502B005FE802 /* AccountListViewModelAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
