@@ -1,4 +1,5 @@
 import UIKit
+import DifferenceKit
 
 class TransactionListViewController: UIViewController, TransactionListView {
 	// MARK: - IBOutlets
@@ -45,9 +46,18 @@ extension TransactionListViewController: UITableViewDelegate {
 // MARK: - TransactionListView
 extension TransactionListViewController {
 	func render(_ state: TransactionListViewState) {
-		currentState = state
 		title = state.navBarTitle
-		tableView.reloadData()
+
+		if currentState == nil {
+			currentState = state
+			tableView.reloadData()
+			return
+		}
+
+		let changeset = StagedChangeset(source: currentState.tableViewCellStates, target: state.tableViewCellStates)
+		tableView.reload(using: changeset, with: .automatic) { _ in
+			currentState = state
+		}
 	}
 }
 
