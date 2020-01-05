@@ -2,7 +2,7 @@ import UIKit
 
 class AccountListViewController: UIViewController, AccountListView {
 	// MARK: - IBOutlets
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var tableView: UITableView!
 	
 	// MARK: - Dependencies
 	var viewModel: AccountListViewModel!

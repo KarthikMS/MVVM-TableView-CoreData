@@ -2,7 +2,7 @@ import UIKit
 
 class ProfileListViewController: UIViewController, ProfileListView {
 	// MARK: - IBOutlets
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var tableView: UITableView!
 
 	// MARK: - Dependencies
 	private let viewModel = ProfileListViewModelAssembler.createInstance()
