@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="90.401785714285708"/>
         </scene>
-        <!--Account Name-->
+        <!--Profile Name-->
         <scene sceneID="3pJ-Ka-dms">
             <objects>
                 <viewController id="Mpd-ie-jz4" customClass="AccountListViewController" customModule="FinancePractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="El0-Ss-4GE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account Name" id="dOU-8X-bgA">
+                    <navigationItem key="navigationItem" title="Profile Name" id="dOU-8X-bgA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FAI-bZ-zJQ">
                             <connections>
                                 <action selector="addAccountButtonPressed:" destination="Mpd-ie-jz4" id="XLR-8v-8Xp"/>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1927.5362318840582" y="89.732142857142847"/>
         </scene>
-        <!--Transaction Name-->
+        <!--Account Name-->
         <scene sceneID="AZG-F2-69s">
             <objects>
                 <viewController id="c93-EQ-kPo" customClass="TransactionListViewController" customModule="FinancePractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I15-wu-FUo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Transaction Name" id="8Jm-B1-HGm">
+                    <navigationItem key="navigationItem" title="Account Name" id="8Jm-B1-HGm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G2t-RY-WgA">
                             <connections>
                                 <action selector="addTransactionButtonPressed:" destination="c93-EQ-kPo" id="7ee-A4-eJb"/>
