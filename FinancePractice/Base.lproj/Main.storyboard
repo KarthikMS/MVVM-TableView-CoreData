@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="90.401785714285708"/>
         </scene>
-        <!--Accounts-->
+        <!--Account Name-->
         <scene sceneID="3pJ-Ka-dms">
             <objects>
                 <viewController id="Mpd-ie-jz4" customClass="AccountListViewController" customModule="FinancePractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="El0-Ss-4GE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Accounts" id="dOU-8X-bgA">
+                    <navigationItem key="navigationItem" title="Account Name" id="dOU-8X-bgA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FAI-bZ-zJQ">
                             <connections>
                                 <action selector="addAccountButtonPressed:" destination="Mpd-ie-jz4" id="XLR-8v-8Xp"/>
@@ -109,11 +109,63 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="708-nn-cL2" id="CG3-Mm-lzV"/>
+                        <segue destination="c93-EQ-kPo" kind="show" identifier="AccountListToTransactionList" id="ZGd-Rm-sQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKO-CE-EtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927.5362318840582" y="89.732142857142847"/>
+        </scene>
+        <!--Transaction Name-->
+        <scene sceneID="AZG-F2-69s">
+            <objects>
+                <viewController id="c93-EQ-kPo" customClass="TransactionListViewController" customModule="FinancePractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0F-m2-gMM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TLM-80-wO1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCellIdentifier" id="l2Y-W6-iNk">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l2Y-W6-iNk" id="Zy3-HS-KUV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="c93-EQ-kPo" id="13T-AL-qa4"/>
+                                    <outlet property="delegate" destination="c93-EQ-kPo" id="hsW-39-eQi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I15-wu-FUo" firstAttribute="trailing" secondItem="TLM-80-wO1" secondAttribute="trailing" id="WVq-md-uGt"/>
+                            <constraint firstItem="I15-wu-FUo" firstAttribute="bottom" secondItem="TLM-80-wO1" secondAttribute="bottom" id="gXm-ji-V18"/>
+                            <constraint firstItem="TLM-80-wO1" firstAttribute="top" secondItem="I15-wu-FUo" secondAttribute="top" id="kyE-wJ-8Ed"/>
+                            <constraint firstItem="TLM-80-wO1" firstAttribute="leading" secondItem="I15-wu-FUo" secondAttribute="leading" id="pot-td-jWN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I15-wu-FUo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transaction Name" id="8Jm-B1-HGm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G2t-RY-WgA">
+                            <connections>
+                                <action selector="addTransactionButtonPressed:" destination="c93-EQ-kPo" id="7ee-A4-eJb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="TLM-80-wO1" id="WCm-Kr-WVs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emp-n1-zcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844.9275362318845" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dj6-Yr-cNc">

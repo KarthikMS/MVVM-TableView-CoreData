@@ -21,6 +21,22 @@ extension AccountListViewController {
 	}
 }
 
+// MARK: - Navigation
+extension AccountListViewController {
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let segueIdentifier = segue.identifier else { fatalError() }
+		switch segueIdentifier {
+		case "AccountListToTransactionList":
+			guard let transactionListViewController = segue.destination as? TransactionListViewController,
+				let account = sender as? Account else { fatalError() }
+			let transactionListViewModel = TransactionListViewModelAssembler.createInstance(account: account)
+			transactionListViewController.viewModel = transactionListViewModel
+		default:
+			break
+		}
+	}
+}
+
 // MARK: - UITableViewDataSource
 extension AccountListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,6 +47,14 @@ extension AccountListViewController: UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCellIdentifier", for: indexPath)
 		cell.textLabel?.text = viewModel.tableViewItems[indexPath.row]
 		return cell
+	}
+}
+
+// MARK: - UITableViewDelegate
+extension AccountListViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		viewModel.tableViewDidSelectRow(at: indexPath)
 	}
 }
 
@@ -65,7 +89,7 @@ extension AccountListViewController {
 	}
 
 	func showTransactions(of account: Account) {
-
+		performSegue(withIdentifier: "AccountListToTransactionList", sender: account)
 	}
 }
 

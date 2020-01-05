@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D91A87EF23C0B85700F956CA /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87EE23C0B85700F956CA /* AccountListView.swift */; };
+		D91A87F523C1802D00F956CA /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87F423C1802D00F956CA /* TransactionListViewController.swift */; };
+		D91A87F723C1807400F956CA /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87F623C1807400F956CA /* TransactionListViewModel.swift */; };
+		D91A87F923C1808E00F956CA /* TransactionListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87F823C1808E00F956CA /* TransactionListDataSource.swift */; };
+		D91A87FC23C180B700F956CA /* TransactionListDataSourceCoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87FB23C180B700F956CA /* TransactionListDataSourceCoreDataImpl.swift */; };
+		D91A87FF23C1835900F956CA /* TransactionListViewModelAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A87FE23C1835900F956CA /* TransactionListViewModelAssembler.swift */; };
 		D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */; };
 		D9257ED123BF1D5E005FE802 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ED023BF1D5E005FE802 /* AccountListViewController.swift */; };
 		D9257ED423BF1D6E005FE802 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257ED323BF1D6E005FE802 /* AccountListViewModel.swift */; };
@@ -59,6 +64,11 @@
 
 /* Begin PBXFileReference section */
 		D91A87EE23C0B85700F956CA /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
+		D91A87F423C1802D00F956CA /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		D91A87F623C1807400F956CA /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		D91A87F823C1808E00F956CA /* TransactionListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataSource.swift; sourceTree = "<group>"; };
+		D91A87FB23C180B700F956CA /* TransactionListDataSourceCoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataSourceCoreDataImpl.swift; sourceTree = "<group>"; };
+		D91A87FE23C1835900F956CA /* TransactionListViewModelAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelAssembler.swift; sourceTree = "<group>"; };
 		D9257ECC23BE1831005FE802 /* ProfileListDataSourceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceObserver.swift; sourceTree = "<group>"; };
 		D9257ED023BF1D5E005FE802 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		D9257ED323BF1D6E005FE802 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +132,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D91A87F023C17FF600F956CA /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87FD23C1834800F956CA /* Assemblers */,
+				D91A87F323C1801300F956CA /* View */,
+				D91A87F223C1800C00F956CA /* ViewModel */,
+				D91A87F123C17FFE00F956CA /* Services */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		D91A87F123C17FFE00F956CA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87FA23C180A700F956CA /* Implementations */,
+				D91A87F823C1808E00F956CA /* TransactionListDataSource.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D91A87F223C1800C00F956CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87F623C1807400F956CA /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D91A87F323C1801300F956CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87F423C1802D00F956CA /* TransactionListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D91A87FA23C180A700F956CA /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87FB23C180B700F956CA /* TransactionListDataSourceCoreDataImpl.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D91A87FD23C1834800F956CA /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				D91A87FE23C1835900F956CA /* TransactionListViewModelAssembler.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
 		D9257ECE23BF1D3E005FE802 /* AccountList */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +378,7 @@
 		D97BA06E23BCF37300274352 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D91A87F023C17FF600F956CA /* TransactionList */,
 				D9257ECE23BF1D3E005FE802 /* AccountList */,
 				D97BA07123BCF46900274352 /* ProfileList */,
 			);
@@ -480,14 +543,19 @@
 				D94697A523BCFFBC004F3C87 /* ProfileListView.swift in Sources */,
 				D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */,
 				D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */,
+				D91A87FC23C180B700F956CA /* TransactionListDataSourceCoreDataImpl.swift in Sources */,
+				D91A87F523C1802D00F956CA /* TransactionListViewController.swift in Sources */,
+				D91A87F923C1808E00F956CA /* TransactionListDataSource.swift in Sources */,
 				D9FF1DB323BCF85500C7E7F2 /* ProfileListDataSourceAssembler.swift in Sources */,
 				D93E8DBB23BC815000982A04 /* AppDelegate.swift in Sources */,
+				D91A87F723C1807400F956CA /* TransactionListViewModel.swift in Sources */,
 				D93367F523C0B50B00E8CF8C /* AccountListDataSource.swift in Sources */,
 				D9257ECD23BE1831005FE802 /* ProfileListDataSourceObserver.swift in Sources */,
 				D93E8E0F23BC926E00982A04 /* Profile+CoreDataProperties.swift in Sources */,
 				D93367F923C0B54500E8CF8C /* AccountListDataSourceCoreDataImpl.swift in Sources */,
 				D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */,
 				D9257ED123BF1D5E005FE802 /* AccountListViewController.swift in Sources */,
+				D91A87FF23C1835900F956CA /* TransactionListViewModelAssembler.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
 				D9257ED723C0502B005FE802 /* AccountListViewModelAssembler.swift in Sources */,
 			);
