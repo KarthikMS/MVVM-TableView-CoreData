@@ -60,6 +60,22 @@ extension TransactionListDataSourceCoreDataImpl {
 			fatalError()
 		}
 	}
+
+	func toggleSort() {
+		let currentSortType = fetchedResultsController.fetchRequest.sortDescriptors![0].key!
+		let newSortType: String
+		if currentSortType == "amount" {
+			newSortType = "createdAt"
+		} else {
+			newSortType = "amount"
+		}
+		fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: newSortType, ascending: true)]
+		do {
+			try fetchedResultsController.performFetch()
+		} catch {
+			fatalError()
+		}
+	}
 }
 
 // MARK: - NSFetchedResultsControllerDelegate

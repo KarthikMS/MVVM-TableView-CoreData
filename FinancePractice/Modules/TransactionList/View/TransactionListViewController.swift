@@ -66,6 +66,10 @@ private extension TransactionListViewController {
 	@IBAction func addTransactionButtonPressed(_ sender: Any) {
 		showAlertToAddTransaction()
 	}
+
+	@IBAction func toggleSortButtonPressed(_ sender: Any) {
+		viewModel.toggleSortButtonPressed()
+	}
 }
 
 // MARK: - Alerts

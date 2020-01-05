@@ -42,6 +42,17 @@ internal extension TransactionListViewModel {
 
 	func tableViewDidSelectRow(at indexPath: IndexPath) {
 	}
+
+	func toggleSortButtonPressed() {
+		dataSource.toggleSort()
+		let newTransactions = dataSource.transactions
+		let navBarTitle = TransactionListViewModel.getNavBarTitle(accountName: account.name, transactions: newTransactions)
+		let tableViewCellStates = TransactionListViewModel.getTableViewCellStates(from: newTransactions)
+		state = TransactionListViewState(
+			navBarTitle: navBarTitle,
+			tableViewCellStates: tableViewCellStates
+		)
+	}
 }
 
 // MARK: - TransactionListDataSourceObserver

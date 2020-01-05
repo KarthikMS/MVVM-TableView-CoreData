@@ -4,4 +4,5 @@ protocol TransactionListDataSource: class {
 	var observer:  TransactionListDataSourceObserver? { get set }
 
 	func addTransaction(amount: Float, note: String?, placeName: String?)
+	func toggleSort()
 }

@@ -153,11 +153,18 @@
                         <viewLayoutGuide key="safeArea" id="I15-wu-FUo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Account Name" id="8Jm-B1-HGm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G2t-RY-WgA">
-                            <connections>
-                                <action selector="addTransactionButtonPressed:" destination="c93-EQ-kPo" id="7ee-A4-eJb"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="G2t-RY-WgA">
+                                <connections>
+                                    <action selector="addTransactionButtonPressed:" destination="c93-EQ-kPo" id="7ee-A4-eJb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="eST-bY-NjC">
+                                <connections>
+                                    <action selector="toggleSortButtonPressed:" destination="c93-EQ-kPo" id="SpP-Vh-qKY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TLM-80-wO1" id="WCm-Kr-WVs"/>
