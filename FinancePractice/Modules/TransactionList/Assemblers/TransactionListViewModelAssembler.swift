@@ -1,5 +1,13 @@
 class TransactionListViewModelAssembler {
 	static func createInstance(account: Account) -> TransactionListViewModel {
-		return TransactionListViewModel()
+		let dataSource: TransactionListDataSource = TransactionListDataSourceCoreDataImpl(
+			account: account,
+			context: CoreDataService.shared.context
+		)
+
+		return TransactionListViewModel(
+			account: account,
+			dataSource: dataSource
+		)
 	}
 }

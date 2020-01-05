@@ -3,7 +3,7 @@ import Foundation
 class AccountListViewModel {
 	// MARK: - Dependencies
 	private let profile: Profile
-	private var dataSource: AccountListDataSource
+	private let dataSource: AccountListDataSource
 
 	// MARK: - Properties
 	var tableViewItems = [String]()
@@ -12,7 +12,7 @@ class AccountListViewModel {
 	init(profile: Profile, dataSource: AccountListDataSource) {
 		self.profile = profile
 		self.dataSource = dataSource
-		self.dataSource.observer = self
+		dataSource.observer = self
 
 		tableViewItems = dataSource.accounts.map { $0.tableViewCellText }
 	}
