@@ -65,7 +65,7 @@ private extension TransactionListViewModel {
 	static func getTableViewCellStates(from transactions: [Transaction]) -> [TransactionListTableViewCellState] {
 		transactions
 			.map { transaction -> TransactionListTableViewCellState in
-				var textLabelText = "\(transaction.amount)"
+				var textLabelText = "Rs.\(transaction.amount)"
 				if let place = transaction.place {
 					textLabelText += "@ \(place.name)"
 				}

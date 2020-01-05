@@ -15,6 +15,7 @@ class TransactionListDataSourceCoreDataImpl: NSObject, TransactionListDataSource
 
 		// Setting up fetchedResultsController
 		let fetchRequest = NSFetchRequest<Transaction>(entityName: "Transaction")
+		fetchRequest.predicate = NSPredicate(format: "account == %@", account)
 		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "amount", ascending: true)]
 		self.fetchedResultsController = NSFetchedResultsController<Transaction>(
 			fetchRequest: fetchRequest,
@@ -45,6 +46,8 @@ extension TransactionListDataSourceCoreDataImpl {
 
 		transaction.amount = amount
 		transaction.note = note
+		transaction.account = account
+		transaction.createdAt = Date()
 
 		if let placeName = placeName,
 			placeName != "" {

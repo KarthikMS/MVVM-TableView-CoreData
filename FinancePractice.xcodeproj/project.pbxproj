@@ -37,7 +37,6 @@
 		D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */; };
 		D93E8E0923BC926E00982A04 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */; };
 		D93E8E0A23BC926E00982A04 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */; };
-		D93E8E0B23BC926E00982A04 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */; };
 		D93E8E0C23BC926E00982A04 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */; };
 		D93E8E0D23BC926E00982A04 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */; };
 		D93E8E0E23BC926E00982A04 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */; };
@@ -46,6 +45,7 @@
 		D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BA06F23BCF46400274352 /* ProfileListViewController.swift */; };
 		D9906B1A23C209340096A831 /* TransactionListDataSourceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1923C209340096A831 /* TransactionListDataSourceObserver.swift */; };
 		D9906B1C23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1B23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift */; };
+		D9906B1E23C2291D0096A831 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1D23C2291D0096A831 /* Transaction+CoreDataProperties.swift */; };
 		D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */; };
 		D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */; };
 		D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */; };
@@ -112,7 +112,6 @@
 		D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		D97BA06F23BCF46400274352 /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
 		D9906B1923C209340096A831 /* TransactionListDataSourceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataSourceObserver.swift; sourceTree = "<group>"; };
 		D9906B1B23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionListTableViewCellState+Differentiable.swift"; sourceTree = "<group>"; };
+		D9906B1D23C2291D0096A831 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModel.swift; sourceTree = "<group>"; };
 		D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSource.swift; sourceTree = "<group>"; };
 		D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceCoreDataImpl.swift; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 				D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */,
 				D93E8E0123BC926E00982A04 /* Account+CoreDataProperties.swift */,
 				D93E8E0223BC926E00982A04 /* Transaction+CoreDataClass.swift */,
-				D93E8E0323BC926E00982A04 /* Transaction+CoreDataProperties.swift */,
+				D9906B1D23C2291D0096A831 /* Transaction+CoreDataProperties.swift */,
 				D93E8E0423BC926E00982A04 /* Place+CoreDataClass.swift */,
 				D93E8E0523BC926E00982A04 /* Place+CoreDataProperties.swift */,
 				D93E8E0623BC926E00982A04 /* Profile+CoreDataClass.swift */,
@@ -680,7 +680,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D93E8E0B23BC926E00982A04 /* Transaction+CoreDataProperties.swift in Sources */,
 				D93E8E0923BC926E00982A04 /* Account+CoreDataProperties.swift in Sources */,
 				D93E8E0C23BC926E00982A04 /* Place+CoreDataClass.swift in Sources */,
 				D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */,
@@ -713,6 +712,7 @@
 				D93367F923C0B54500E8CF8C /* AccountListDataSourceCoreDataImpl.swift in Sources */,
 				D97BA07023BCF46400274352 /* ProfileListViewController.swift in Sources */,
 				D9257ED123BF1D5E005FE802 /* AccountListViewController.swift in Sources */,
+				D9906B1E23C2291D0096A831 /* Transaction+CoreDataProperties.swift in Sources */,
 				D91A87FF23C1835900F956CA /* TransactionListViewModelAssembler.swift in Sources */,
 				D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */,
 				D9257ED723C0502B005FE802 /* AccountListViewModelAssembler.swift in Sources */,

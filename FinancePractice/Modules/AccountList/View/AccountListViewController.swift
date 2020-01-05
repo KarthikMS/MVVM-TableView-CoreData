@@ -19,6 +19,11 @@ extension AccountListViewController {
 		super.viewWillAppear(animated)
 		viewModel.viewWillAppear(view: self)
 	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		viewModel.viewWillDisappear()
+	}
 }
 
 // MARK: - Navigation

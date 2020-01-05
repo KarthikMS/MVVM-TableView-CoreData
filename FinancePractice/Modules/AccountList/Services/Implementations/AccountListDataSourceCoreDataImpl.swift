@@ -15,6 +15,7 @@ class AccountListDataSourceCoreDataImpl: NSObject, AccountListDataSource {
 
 		// Setting up fetchedResultsController
 		let fetchRequest = NSFetchRequest<Account>(entityName: "Account")
+		fetchRequest.predicate = NSPredicate(format: "profile == %@", profile)
 		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
 		self.fetchedResultsController = NSFetchedResultsController<Account>(
 			fetchRequest: fetchRequest,

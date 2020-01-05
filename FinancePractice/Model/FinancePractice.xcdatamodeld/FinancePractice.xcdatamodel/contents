@@ -17,14 +17,15 @@
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
         <attribute name="amount" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
-        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account"/>
+        <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account"/>
         <relationship name="place" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="transactions" inverseEntity="Place"/>
     </entity>
     <elements>
         <element name="Account" positionX="-378.578125" positionY="-236.171875" width="128" height="88"/>
         <element name="Place" positionX="-171" positionY="-45" width="128" height="88"/>
         <element name="Profile" positionX="-74.046875" positionY="-236.80078125" width="128" height="88"/>
-        <element name="Transaction" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="Transaction" positionX="-36" positionY="9" width="128" height="118"/>
     </elements>
 </model>
