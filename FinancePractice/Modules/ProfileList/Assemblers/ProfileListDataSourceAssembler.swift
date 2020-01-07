@@ -1,5 +1,5 @@
 class ProfileListDataSourceAssembler {
 	static func createInstance() -> ProfileListDataSource {
-		ProfileListDataSourceCoreDataImpl()
+		ProfileListDataSourceCoreDataImpl(context: CoreDataService.shared.context)
 	}
 }

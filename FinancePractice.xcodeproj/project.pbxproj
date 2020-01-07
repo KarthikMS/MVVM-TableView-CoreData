@@ -31,7 +31,6 @@
 		D93E8DC523BC815000982A04 /* FinancePractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DC323BC815000982A04 /* FinancePractice.xcdatamodeld */; };
 		D93E8DC723BC815200982A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC623BC815200982A04 /* Assets.xcassets */; };
 		D93E8DCA23BC815200982A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93E8DC823BC815200982A04 /* LaunchScreen.storyboard */; };
-		D93E8DD523BC815300982A04 /* FinancePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DD423BC815300982A04 /* FinancePracticeTests.swift */; };
 		D93E8DE023BC815300982A04 /* FinancePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */; };
 		D93E8DEE23BC81B000982A04 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8DED23BC81B000982A04 /* CoreDataService.swift */; };
 		D93E8E0823BC926E00982A04 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E8E0023BC926E00982A04 /* Account+CoreDataClass.swift */; };
@@ -46,6 +45,10 @@
 		D9906B1A23C209340096A831 /* TransactionListDataSourceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1923C209340096A831 /* TransactionListDataSourceObserver.swift */; };
 		D9906B1C23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1B23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift */; };
 		D9906B1E23C2291D0096A831 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1D23C2291D0096A831 /* Transaction+CoreDataProperties.swift */; };
+		D9906B2023C22C600096A831 /* ProfileListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B1F23C22C600096A831 /* ProfileListViewModelTests.swift */; };
+		D9906B2323C230560096A831 /* MockProfileListViewModelAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B2223C230560096A831 /* MockProfileListViewModelAssembler.swift */; };
+		D9906B2523C230790096A831 /* MockProfileListDataSourceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B2423C230790096A831 /* MockProfileListDataSourceAssembler.swift */; };
+		D9906B2823C2328C0096A831 /* MockProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906B2723C2328C0096A831 /* MockProfileListView.swift */; };
 		D9FF1DAD23BCF6F900C7E7F2 /* ProfileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */; };
 		D9FF1DAF23BCF7E600C7E7F2 /* ProfileListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */; };
 		D9FF1DB123BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */; };
@@ -103,7 +106,6 @@
 		D93E8DC923BC815200982A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D93E8DCB23BC815200982A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93E8DD023BC815300982A04 /* FinancePracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancePracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D93E8DD423BC815300982A04 /* FinancePracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancePracticeTests.swift; sourceTree = "<group>"; };
 		D93E8DD623BC815300982A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93E8DDB23BC815300982A04 /* FinancePracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancePracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93E8DDF23BC815300982A04 /* FinancePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancePracticeUITests.swift; sourceTree = "<group>"; };
@@ -121,6 +123,10 @@
 		D9906B1923C209340096A831 /* TransactionListDataSourceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListDataSourceObserver.swift; sourceTree = "<group>"; };
 		D9906B1B23C21FF10096A831 /* TransactionListTableViewCellState+Differentiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionListTableViewCellState+Differentiable.swift"; sourceTree = "<group>"; };
 		D9906B1D23C2291D0096A831 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9906B1F23C22C600096A831 /* ProfileListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModelTests.swift; sourceTree = "<group>"; };
+		D9906B2223C230560096A831 /* MockProfileListViewModelAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileListViewModelAssembler.swift; sourceTree = "<group>"; };
+		D9906B2423C230790096A831 /* MockProfileListDataSourceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileListDataSourceAssembler.swift; sourceTree = "<group>"; };
+		D9906B2723C2328C0096A831 /* MockProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfileListView.swift; sourceTree = "<group>"; };
 		D9FF1DAC23BCF6F900C7E7F2 /* ProfileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewModel.swift; sourceTree = "<group>"; };
 		D9FF1DAE23BCF7E600C7E7F2 /* ProfileListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSource.swift; sourceTree = "<group>"; };
 		D9FF1DB023BCF84900C7E7F2 /* ProfileListDataSourceCoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSourceCoreDataImpl.swift; sourceTree = "<group>"; };
@@ -347,8 +353,9 @@
 		D93E8DD323BC815300982A04 /* FinancePracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D93E8DD423BC815300982A04 /* FinancePracticeTests.swift */,
+				D9906B2123C2304D0096A831 /* Assembler */,
 				D93E8DD623BC815300982A04 /* Info.plist */,
+				D9906B2623C2325C0096A831 /* ProfileListViewModelTests */,
 			);
 			path = FinancePracticeTests;
 			sourceTree = "<group>";
@@ -459,6 +466,24 @@
 			path = ProfileList;
 			sourceTree = "<group>";
 		};
+		D9906B2123C2304D0096A831 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		D9906B2623C2325C0096A831 /* ProfileListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9906B1F23C22C600096A831 /* ProfileListViewModelTests.swift */,
+				D9906B2723C2328C0096A831 /* MockProfileListView.swift */,
+				D9906B2223C230560096A831 /* MockProfileListViewModelAssembler.swift */,
+				D9906B2423C230790096A831 /* MockProfileListDataSourceAssembler.swift */,
+			);
+			path = ProfileListViewModelTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +559,7 @@
 					};
 					D93E8DCF23BC815300982A04 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = D93E8DB623BC815000982A04;
 					};
 					D93E8DDA23BC815300982A04 = {
@@ -723,7 +749,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D93E8DD523BC815300982A04 /* FinancePracticeTests.swift in Sources */,
+				D9906B2023C22C600096A831 /* ProfileListViewModelTests.swift in Sources */,
+				D9906B2323C230560096A831 /* MockProfileListViewModelAssembler.swift in Sources */,
+				D9906B2823C2328C0096A831 /* MockProfileListView.swift in Sources */,
+				D9906B2523C230790096A831 /* MockProfileListDataSourceAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +957,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ824L8Y37;
 				INFOPLIST_FILE = FinancePracticeTests/Info.plist;
@@ -939,6 +969,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoho.showdraw.mac.FinancePracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancePractice.app/FinancePractice";
@@ -951,6 +982,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ824L8Y37;
 				INFOPLIST_FILE = FinancePracticeTests/Info.plist;

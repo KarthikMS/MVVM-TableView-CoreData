@@ -2,15 +2,14 @@ import CoreData
 
 class ProfileListDataSourceCoreDataImpl: NSObject, ProfileListDataSource {
 	// MARK: - Dependencies
-	private let coreDataService = CoreDataService.shared
 	private let context: NSManagedObjectContext
 
 	// MARK: - Properites
 	weak var observer: ProfileListDataSourceObserver?
 	private let fetchedResultsController: NSFetchedResultsController<Profile>
 
-	override init() {
-		self.context = coreDataService.context
+	init(context: NSManagedObjectContext) {
+		self.context = context
 
 		// Setting up fetchedResultsController
 		let fetchRequest = NSFetchRequest<Profile>(entityName: "Profile")
@@ -42,14 +41,24 @@ extension ProfileListDataSourceCoreDataImpl {
 		let profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: context)!
 		let profile = Profile(entity: profileEntity, insertInto: context)
 		profile.userName = userName
-		coreDataService.saveContext()
+
+		do {
+			try context.save()
+		} catch {
+			fatalError()
+		}
 	}
 
 	func clearData() {
 		for profile in profiles {
 			context.delete(profile)
 		}
-		coreDataService.saveContext()
+
+		do {
+			try context.save()
+		} catch {
+			fatalError()
+		}
 	}
 }
 
